@@ -17,6 +17,8 @@ public class WebShopApp {
         //choice is creating a value for user choices a number.
         int choice;
 
+        //Making a menu...
+
         do {
             System.out.println("\n*** SNACK SHOP MENU ***");
             System.out.println("1.  Add Product");
@@ -24,14 +26,19 @@ public class WebShopApp {
             System.out.println("3.  Show Product Info");
             System.out.println("4.  Exit");
             System.out.print("Your choice is : ");
+
+
             //Integer.parseInt is a built in method to convert String to Int...
+
             choice = Integer.parseInt(scanner.nextLine());
+
+            //switch for choices made from user input
 
             switch (choice) {
                 case 1 -> addProduct(scanner, products);
                 case 2 -> listProducts(products);
                 case 3 -> showProductInfo(scanner, products);
-                case 4 -> System.out.println("Goodbye!");
+                case 4 -> System.out.println("Goodbye & Thank you!");
                 default -> System.out.println("Invalid choice, try again.");
             }
         } while (choice != 4);
@@ -57,6 +64,8 @@ public class WebShopApp {
         String description = scanner.nextLine();
 
         Product product = null;
+
+        //
 
         switch (type) {
             case 1 -> {
@@ -84,7 +93,7 @@ public class WebShopApp {
     }
 
     private static void listProducts(List<Product> products) {
-        System.out.println("\n--- PRODUCT LIST ---");
+        System.out.println("\n*** PRODUCT LIST ***");
         if (products.isEmpty()) {
             System.out.println("No products available.");
         } else {
@@ -101,7 +110,7 @@ public class WebShopApp {
         boolean found = false;
         for (Product p : products) {
             if (p.getArticleNumber() == number) {
-                System.out.println("\n--- PRODUCT INFO ---");
+                System.out.println("\n*** PRODUCT INFO ***");
                 p.displayInfo();
                 found = true;
                 break;
