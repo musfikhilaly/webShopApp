@@ -5,20 +5,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+//Main application....
+
 public class WebShopApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        //to list a product and making a new empty list with new arrayList
         List<Product> products = new ArrayList<>();
 
+
+        //choice is creating a value for user choices a number.
         int choice;
 
         do {
-            System.out.println("\n=== SNACK SHOP MENU ===");
-            System.out.println("1. Add Product");
-            System.out.println("2. List All Products");
-            System.out.println("3. Show Product Info");
-            System.out.println("4. Exit");
-            System.out.print("Your choice: ");
+            System.out.println("\n*** SNACK SHOP MENU ***");
+            System.out.println("1.  Add Product");
+            System.out.println("2.  List All Products");
+            System.out.println("3.  Show Product Info");
+            System.out.println("4.  Exit");
+            System.out.print("Your choice is : ");
+            //Integer.parseInt is a built in method to convert String to Int...
             choice = Integer.parseInt(scanner.nextLine());
 
             switch (choice) {
@@ -103,7 +109,7 @@ public class WebShopApp {
         }
 
         if (!found) {
-            System.out.println("No product found with that article number.");
+            System.out.println("No product found with this article number.");
         }
     }
 }

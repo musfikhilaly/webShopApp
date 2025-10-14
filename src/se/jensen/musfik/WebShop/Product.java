@@ -18,20 +18,29 @@ public abstract class Product {
     }
 
     // Getters and Setters
-    public int getArticleNumber() { return articleNumber; }
-    public void setArticleNumber(int articleNumber) { this.articleNumber = articleNumber; }
+    public int getArticleNumber()
+    { return articleNumber; }
+    public void setArticleNumber(int articleNumber)
+    { this.articleNumber = articleNumber; }
 
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
+    public String getTitle()
+    { return title; }
+    public void setTitle(String title)
+    { this.title = title; }
 
-    public double getPrice() { return price; }
-    public void setPrice(double price) { this.price = price; }
+    public double getPrice()
+    { return price; }
+    public void setPrice(double price)
+    { this.price = price; }
 
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
+    public String getDescription()
+    { return description; }
+    public void setDescription(String description)
+    { this.description = description; }
 
     // Abstract method (must be implemented by subclasses)
     public abstract String category();
+
 
     // Display common info for all products
     public void displayInfo() {

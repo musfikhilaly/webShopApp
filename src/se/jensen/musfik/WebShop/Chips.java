@@ -1,6 +1,8 @@
 package se.jensen.musfik.WebShop;
 
 
+//Chips is a subclass here...
+
 public class Chips extends Product {
     private String flavor;
 
@@ -11,6 +13,9 @@ public class Chips extends Product {
 
     public String getFlavor() { return flavor; }
     public void setFlavor(String flavor) { this.flavor = flavor; }
+
+
+    //@Override again
 
     @Override
     public String category() {

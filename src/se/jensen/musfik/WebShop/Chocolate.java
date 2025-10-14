@@ -1,6 +1,8 @@
 package se.jensen.musfik.WebShop;
 
 
+//Chocolate is a subclass ...
+
 public class Chocolate extends Product {
     private int cocoaPercent;
 
@@ -9,7 +11,8 @@ public class Chocolate extends Product {
         this.cocoaPercent = cocoaPercent;
     }
 
-    public int getCocoaPercent() { return cocoaPercent; }
+    public int getCocoaPercent()
+    { return cocoaPercent; }
     public void setCocoaPercent(int cocoaPercent) { this.cocoaPercent = cocoaPercent; }
 
     @Override

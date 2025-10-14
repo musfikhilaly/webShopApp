@@ -1,6 +1,6 @@
 package se.jensen.musfik.WebShop;
 
-
+//Subclass and Drinks inherits info from Product
 
 public class Drinks extends Product {
     private double volume; // in liters
@@ -10,8 +10,14 @@ public class Drinks extends Product {
         this.volume = volume;
     }
 
-    public double getVolume() { return volume; }
+    //getter and setter..
+
+    public double getVolume() {
+        return volume;
+    }
     public void setVolume(double volume) { this.volume = volume; }
+
+    //@Override---this method is replacing a method that already exists in parent method...
 
     @Override
     public String category() {
