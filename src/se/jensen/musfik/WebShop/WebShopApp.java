@@ -1,46 +1,50 @@
 package se.jensen.musfik.WebShop;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-//Main application....
-
 public class WebShopApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        //to list a product and making a new empty list with new arrayList
         List<Product> products = new ArrayList<>();
-
-
-        //choice is creating a value for user choices a number.
-        int choice;
-
-        //Making a menu...
+        int choice = 0;
+        //creating a menu for webshop
 
         do {
             System.out.println("\n*** SNACK SHOP MENU ***");
-            System.out.println("1.  Add Product");
-            System.out.println("2.  List All Products");
-            System.out.println("3.  Show Product Info");
-            System.out.println("4.  Exit");
-            System.out.print("Your choice is : ");
+            System.out.println("1. Add Product");
+            System.out.println("2. List All Products");
+            System.out.println("3. Show Product Info");
+            System.out.println("4. Exit");
 
+            // Try catch incase user input is not numbers
+            boolean validInput = false;
+            while (!validInput) {
+                System.out.print("Your choice is: ");
+                String input = scanner.nextLine();
 
-            //Integer.parseInt is a built in method to convert String to Int...
+                try {
+                    choice = Integer.parseInt(input);
+                    if (choice >= 1 && choice <= 4) {
+                        validInput = true;
+                    } else {
+                        System.out.println("Please enter a number between 1 and 4.");
+                    }
+                    //trying to limit user in INTEGER between 1-4.by catching the error with Exception e....
+                } catch (Exception e) {
+                    System.out.println("Invalid input! Try again with a number between 1 and 4.");
+                }
+            }
 
-            choice = Integer.parseInt(scanner.nextLine());
-
-            //switch for choices made from user input
-
+            // Making menu options work ...
             switch (choice) {
                 case 1 -> addProduct(scanner, products);
                 case 2 -> listProducts(products);
                 case 3 -> showProductInfo(scanner, products);
                 case 4 -> System.out.println("Goodbye & Thank you!");
-                default -> System.out.println("Invalid choice, try again.");
             }
+
         } while (choice != 4);
 
         scanner.close();
@@ -51,8 +55,23 @@ public class WebShopApp {
         System.out.println("1. Drink");
         System.out.println("2. Chips");
         System.out.println("3. Chocolate");
-        System.out.print("Your choice: ");
-        int type = Integer.parseInt(scanner.nextLine());
+
+        int type = 0;
+        boolean validType = false;
+        while (!validType) {
+            System.out.print("Your choice: ");
+            String input = scanner.nextLine();
+            try {
+                type = Integer.parseInt(input);
+                if (type >= 1 && type <= 3) {
+                    validType = true;
+                } else {
+                    System.out.println("Please enter 1, 2, or 3.");
+                }
+            } catch (Exception e) {
+                System.out.println("Invalid input! Please enter a number.");
+            }
+        }
 
         System.out.print("Article number: ");
         int articleNumber = Integer.parseInt(scanner.nextLine());
@@ -64,8 +83,6 @@ public class WebShopApp {
         String description = scanner.nextLine();
 
         Product product = null;
-
-        //
 
         switch (type) {
             case 1 -> {
@@ -83,7 +100,6 @@ public class WebShopApp {
                 int cocoa = Integer.parseInt(scanner.nextLine());
                 product = new Chocolate(articleNumber, title, price, description, cocoa);
             }
-            default -> System.out.println("Invalid product type.");
         }
 
         if (product != null) {
