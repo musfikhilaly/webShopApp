@@ -7,15 +7,7 @@ public class Drinks extends Product {
 
     public Drinks(int articleNumber, String title, double price, String description, double volume) {
         super(articleNumber, title, price, description);
-        this.volume = volume;
     }
-
-    //getter and setter..
-
-    public double getVolume() {
-        return volume;
-    }
-    public void setVolume(double volume) { this.volume = volume; }
 
     //@Override---this method is replacing a method that already exists in parent method...
 
