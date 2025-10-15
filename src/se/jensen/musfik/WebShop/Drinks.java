@@ -5,6 +5,9 @@ package se.jensen.musfik.WebShop;
 public class Drinks extends Product {
     private double volume; // in liters
 
+
+    //constructor in use
+
     public Drinks(int articleNumber, String title, double price, String description, double volume) {
         super(articleNumber, title, price, description);
         this.volume = volume;

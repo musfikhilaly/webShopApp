@@ -9,6 +9,7 @@ public class WebShopApp {
         Scanner scanner = new Scanner(System.in);
         List<Product> products = new ArrayList<>();
         int choice = 0;
+
         //creating a menu for webshop
 
         do {
@@ -18,12 +19,13 @@ public class WebShopApp {
             System.out.println("3. Show Product Info");
             System.out.println("4. Exit");
 
-            // Try catch incase user input is not numbers
+            // Try catch in case user input is not numbers
+
             boolean validInput = false;
             while (!validInput) {
                 System.out.print("Your choice is: ");
                 String input = scanner.nextLine();
-
+            //Integer.parseInt method to turn string to int
                 try {
                     choice = Integer.parseInt(input);
                     if (choice >= 1 && choice <= 4) {

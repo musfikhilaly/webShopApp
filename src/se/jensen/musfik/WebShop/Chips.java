@@ -6,6 +6,8 @@ package se.jensen.musfik.WebShop;
 public class Chips extends Product {
     private String flavor;
 
+    // constructor in use
+
     public Chips(int articleNumber, String title, double price, String description, String flavor) {
         super(articleNumber, title, price, description);
         this.flavor = flavor;
