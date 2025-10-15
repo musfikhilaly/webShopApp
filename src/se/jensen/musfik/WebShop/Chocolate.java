@@ -8,6 +8,7 @@ public class Chocolate extends Product {
 
     public Chocolate(int articleNumber, String title, double price, String description, int cocoaPercent) {
         super(articleNumber, title, price, description);
+        this .cocoaPercent = cocoaPercent;
     }
 
     @Override
