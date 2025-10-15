@@ -15,7 +15,7 @@ public class WebShopApp {
         do {
             System.out.println("\n*** SNACK SHOP MENU ***");
             System.out.println("1. Add Product");
-            System.out.println("2. List All Products");
+            System.out.println("2. List of Products");
             System.out.println("3. Show Product Info");
             System.out.println("4. Exit");
 
