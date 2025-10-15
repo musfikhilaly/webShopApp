@@ -19,7 +19,7 @@ public class WebShopApp {
             System.out.println("3. Show Product Info");
             System.out.println("4. Exit");
 
-            // Try catch in case user input is not numbers
+            // Try & catch method, in case user input is not numbers
 
             boolean validInput = false;
             while (!validInput) {
