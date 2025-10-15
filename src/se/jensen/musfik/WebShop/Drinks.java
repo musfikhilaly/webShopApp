@@ -3,7 +3,9 @@ package se.jensen.musfik.WebShop;
 //Subclass and Drinks inherits info from Product
 
 public class Drinks extends Product {
-    private double volume; // in liters
+
+    // in liters
+    private double volume;
 
 
     //constructor in use
